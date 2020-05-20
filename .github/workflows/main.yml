@@ -1,0 +1,17 @@
+on: [push]
+
+jobs:
+  stylecheckercpp:
+    runs-on: ubuntu-latest
+    name: Style Checker
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Style Check Step
+      uses: ezequielsvelez/cppStyleCheckerAction@master
+      id: cppstylecheck
+      with:
+        filterlocation: './filefilter.txt'
+        codefolders: './mitigator'
+    - name: Get the output
+      run: echo "${{ steps.cppstylecheck.outputs.report }}"
