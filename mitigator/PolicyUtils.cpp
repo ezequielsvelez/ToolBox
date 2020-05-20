@@ -10,7 +10,7 @@
         if (0) { print_error(str(p), GetLastError()); } \
 		    } else
 
-// print mitigation function
+// print mitigation function hproc
 void print_mitigations(HANDLE hProc) {
 
 	PROCESS_MITIGATION_DEP_POLICY                       dep = { 0 };
