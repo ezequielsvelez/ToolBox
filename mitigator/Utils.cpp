@@ -1,6 +1,7 @@
 #include "Utils.h"
 #include <iostream>
 
+// print error
 void print_error(const char *desc, DWORD errcode) {
 	LPTSTR errorText = NULL;
 
